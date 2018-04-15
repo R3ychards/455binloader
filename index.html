@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="runExploit()" style="margin:0;">
+  <div id="loader" class="loader"></div>
+
+  <div id="allset" class="info" style="display:none;">
+    NOW LOAD BIN FILES!
+  </div>
+
+  <div id="fail" class="info" style="display:none;">
+    FAILED!
+  </div>
+
+  <div id="badfw" class="info" style="display:none;">
+    
+  </div>
+
+  <script>
+    function runExploit() {
+      setTimeout(exploit, 1500);
+    }
+
+    function allset() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("allset").style.display = "block";
+    }
+
+    function fail(info) {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("fail").style.display = "block";
+
+      alert(info)
+    }
+  </script>
+
+  <script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="rop.js"></script>
+		<script type="text/javascript" src="syscalls.js"></script>
+		<!--<script type="text/javascript" src="homebrew.js"></script>-->
+		<script type="text/javascript" src="loader.js"></script>
+		<script type="text/javascript" src="userland.js"></script>
+		<script type="text/javascript" src="kernel.js"></script>
+		<script type="text/javascript">
+</body>
+</html>
